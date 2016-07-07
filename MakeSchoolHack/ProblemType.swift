@@ -1,5 +1,5 @@
 //
-//  problemType.swift
+//  ProblemType.swift
 //  MakeSchoolHack
 //
 //  Created by Michael Alvin on 7/7/16.
@@ -8,21 +8,23 @@
 
 import Foundation
 
-class problemType {
+
+
+class ProblemType {
     static func multiply(num1: Int, num2: Int) -> String {
         return String(num1 * num2)
     }
     
     static func divide (num1: Int, num2: Int) -> String {
-    return String(num1 / num2)
+        return String(num1 / num2)
     }
     
     static func add (num1: Int, num2: Int) -> String {
-    return String(num1 + num2)
+        return String(num1 + num2)
     }
     
     static func subtract (num1: Int, num2: Int) -> String {
-    return String(num1 - num2)
+        return String(num1 - num2)
     }
     
 //    switch problemTypes {
