@@ -15,6 +15,7 @@
 		437858C21D2D84350034D1D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437858C01D2D84350034D1D8 /* LaunchScreen.storyboard */; };
 		437858CD1D2D84350034D1D8 /* MakeSchoolHackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437858CC1D2D84350034D1D8 /* MakeSchoolHackTests.swift */; };
 		437858D81D2D84350034D1D8 /* MakeSchoolHackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437858D71D2D84350034D1D8 /* MakeSchoolHackUITests.swift */; };
+		43C1F2501D2E9FA200FE8E05 /* problemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C1F24F1D2E9FA200FE8E05 /* problemType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		437858D31D2D84350034D1D8 /* MakeSchoolHackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeSchoolHackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		437858D71D2D84350034D1D8 /* MakeSchoolHackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSchoolHackUITests.swift; sourceTree = "<group>"; };
 		437858D91D2D84350034D1D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43C1F24F1D2E9FA200FE8E05 /* problemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = problemType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				437858C01D2D84350034D1D8 /* LaunchScreen.storyboard */,
 				437858C31D2D84350034D1D8 /* Info.plist */,
 				437858BB1D2D84350034D1D8 /* MakeSchoolHack.xcdatamodeld */,
+				43C1F24F1D2E9FA200FE8E05 /* problemType.swift */,
 			);
 			path = MakeSchoolHack;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				437858B71D2D84350034D1D8 /* ViewController.swift in Sources */,
 				437858BD1D2D84350034D1D8 /* MakeSchoolHack.xcdatamodeld in Sources */,
 				437858B51D2D84350034D1D8 /* AppDelegate.swift in Sources */,
+				43C1F2501D2E9FA200FE8E05 /* problemType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +492,7 @@
 				437858DE1D2D84350034D1D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		437858DF1D2D84350034D1D8 /* Build configuration list for PBXNativeTarget "MakeSchoolHackTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				437858E11D2D84350034D1D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		437858E21D2D84350034D1D8 /* Build configuration list for PBXNativeTarget "MakeSchoolHackUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				437858E41D2D84350034D1D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
