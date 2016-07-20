@@ -11,16 +11,91 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var counterLabel: UILabel!
     
+    var counter = 1
+    
+    var timerTime = ""
     
     var startTime = NSTimeInterval()
     
     var timer:NSTimer = NSTimer()
     
+    var bestTime: String?
+    
+    
+    func restart () {
+        generateQuestion()
+        counter = 1
+        questionNumberLabel.text = String(counter)
+        answerBox.text = ""
+        start()
+    }
+    
+    func endGame(){
+        //        if bestTime == nil {
+        //            bestTime = timerTime
+        //            NSUserDefaults.standardUserDefaults().setObject(bestTime, forKey: "bestTime")
+        //            updateBestTimeLabel()
+        //        }
+        
+        if(bestTime == nil || bestTime > timerTime){
+            bestTime = timerTime
+            // save to NSUserDefauults
+            NSUserDefaults.standardUserDefaults().setObject(bestTime, forKey: "bestTime")
+            
+            updateBestTimeLabel()
+        }
+        
+        let alertController: UIAlertController = UIAlertController(title: "Congratulations! 🐠 You finished in " + timerTime, message: "Do you want to practice some more?", preferredStyle: .Alert)
+        
+        
+        let moreButton = UIAlertAction(title: "Yes!", style: .Default) { (action: UIAlertAction) in
+            
+            self.restart()
+        }
+        
+        alertController.addAction(moreButton)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
+    }
+    
+    func updateBestTimeLabel() {
+        bestTime = NSUserDefaults.standardUserDefaults().stringForKey("bestTime")
+        
+        if let bestTime = bestTime {
+            bestTimerLabel.text = bestTime
+        } else {
+            bestTimerLabel.text = "Does not exist"
+        }
+    }
+    
+    
+    func askUserToStart(){
+        let alert: UIAlertController = UIAlertController(title: "This is a simple math game that tests your math speed.", message: "Are you ready?", preferredStyle: .Alert)
+        
+        let startAction = UIAlertAction(title: "Start!", style: .Default) { (action: UIAlertAction) in
+            self.generateQuestion()
+            self.start()
+        }
+        
+        alert.addAction(startAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        generateQuestion()
-        start()
+        
+        updateBestTimeLabel()
+
+//        askUserToStart()
+//        generateQuestion()
+//        start()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        askUserToStart()
     }
     
     func start(){
@@ -35,8 +110,11 @@ class ViewController: UIViewController {
         timer.invalidate()
     }
     
+    @IBOutlet weak var questionNumberLabel: UILabel!
+    
     func updateTime() {
         let currentTime = NSDate.timeIntervalSinceReferenceDate()
+        
         
         //Find the difference between current time and start time.
         var elapsedTime: NSTimeInterval = currentTime - startTime
@@ -60,8 +138,10 @@ class ViewController: UIViewController {
         
         //concatenate minuets, seconds and milliseconds as assign it to the UILabel
         counterLabel.text = "\(strMinutes):\(strSeconds):\(strFraction)"
+        timerTime = "\(strMinutes):\(strSeconds):\(strFraction)"
+        
     }
-
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -77,16 +157,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var mathSymbol: UILabel!
     
     @IBAction func backButton(sender: AnyObject) {
+        answerBox.text = ""
         
-        if let str = answerBox.text{
-            if(str.characters.count != 0){
-                let index = str.endIndex.advancedBy(-1)
-                
-                let substr = str.substringToIndex(index)
-                
-                answerBox.text? = substr
-            }
-        }
+        //        if let str = answerBox.text{
+        //            if(str.characters.count != 0){
+        //                let index = str.endIndex.advancedBy(-1)
+        //
+        //                let substr = str.substringToIndex(index)
+        //
+        //                answerBox.text? = substr
+        //            }
+        //        }
         
     }
     
@@ -99,64 +180,42 @@ class ViewController: UIViewController {
             answerBox.text? += digit
         }
         
-        var answer = ""
+        if(counter == 10 && checkCorrectAnswer()){
+            stop()
+            endGame()
+            //counter = 0
+        }
         
-        if let problemTypeCheck = mathSymbol.text{
-            switch problemTypeCheck {
-            case "+":
-                answer = ProblemType.add(Int(numberOne.text!)!, num2: Int(numberTwo.text!)!)
-            case "-":
-                answer = ProblemType.subtract(Int(numberOne.text!)!, num2: Int(numberTwo.text!)!)
-            case "x":
-                answer = ProblemType.multiply(Int(numberOne.text!)!, num2: Int(numberTwo.text!)!)
-            case "/":
-                answer = ProblemType.divide(Int(numberOne.text!)!, num2: Int(numberTwo.text!)!)
-                
-            default: break
+        if(checkCorrectAnswer()){
+            checkButtonOutlet.setImage(UIImage(named: "numButtonCheckGreenGradient.png"), forState: .Normal)
+            
+            if(counter < 10){
+                counter += 1
+                // sleep(1)
+                questionNumberLabel.text = String(counter)
+                generateQuestion()
             }
             
-            
-            if(answer != answerBox.text){
-                checkButtonOutlet.setImage(UIImage(named: "numButtonCheckRedGradient.png"), forState: .Normal)
-            } else {
-                checkButtonOutlet.setImage(UIImage(named: "numButtonCheckGreenGradient.png"), forState: .Normal)
-            }
-
+        } else {
+            checkButtonOutlet.setImage(UIImage(named: "numButtonCheckRedGradient.png"), forState: .Normal)
         }
     }
     
+    @IBOutlet weak var bestTimerLabel: UILabel!
     
     @IBOutlet weak var checkButtonOutlet: UIButton!
     
     @IBAction func checkButton(sender: AnyObject) {
-        var answer = ""
-        
-        if let problemTypeCheck = mathSymbol.text{
-            switch problemTypeCheck {
-            case "+":
-                answer = ProblemType.add(Int(numberOne.text!)!, num2: Int(numberTwo.text!)!)
-            case "-":
-                answer = ProblemType.subtract(Int(numberOne.text!)!, num2: Int(numberTwo.text!)!)
-            case "x":
-                answer = ProblemType.multiply(Int(numberOne.text!)!, num2: Int(numberTwo.text!)!)
-            case "/":
-                answer = ProblemType.divide(Int(numberOne.text!)!, num2: Int(numberTwo.text!)!)
-                
-            default: break
-            }
-            
-            if answer == answerBox.text{
-                generateQuestion()
-            }
+        if(checkCorrectAnswer()){
+            generateQuestion()
         }
-        
     }
     
     
     
     func generateQuestion() {
         let numOne = arc4random_uniform(9) + 1
-        let numTwo = arc4random_uniform(5) + 1
+        let numTwo = arc4random_uniform(9) + 1
         
         numberOne.text? = String(numOne)
         numberTwo.text? = String(numTwo)
@@ -182,19 +241,7 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func negativeButton(sender: AnyObject) {
-        
-        if(answerBox.text![0] != "-"){
-            answerBox.text? = "-" + answerBox.text!
-        } else if (answerBox.text![0] == "-"){
-            if var str = answerBox.text{
-                if(str.characters.count != 0){
-                    str.removeAtIndex(str.startIndex)
-                    answerBox.text? = str
-                }
-            }
-        }
-        
+    func checkCorrectAnswer() -> Bool {
         var answer = ""
         
         if let problemTypeCheck = mathSymbol.text{
@@ -209,30 +256,36 @@ class ViewController: UIViewController {
                 answer = ProblemType.divide(Int(numberOne.text!)!, num2: Int(numberTwo.text!)!)
                 
             default: break
+                
             }
-            
-            
-            if(answer != answerBox.text){
-                checkButtonOutlet.setImage(UIImage(named: "numButtonCheckRedGradient.png"), forState: .Normal)
-            } else {
-                checkButtonOutlet.setImage(UIImage(named: "numButtonCheckGreenGradient.png"), forState: .Normal)
-            }
-            
-            
+        }
+        
+        if(answer == answerBox.text){
+            return true
+        } else {
+            return false
         }
     }
     
-}
-
-
-extension String {
     
-    subscript (i: Int) -> Character {
-        return self[self.startIndex.advancedBy(i)]
-    }
-    
-    subscript (i: Int) -> String {
-        return String(self[i] as Character)
+    @IBAction func negativeButton(sender: AnyObject) {
+        
+        
+        //answerBox.text = "-" + answerBox.text!
+        
+        // must check if empty answer box
+        
+        if(answerBox.text![0] != "-"){
+            answerBox.text = "-" + answerBox.text!
+        } else if (answerBox.text![0] == "-"){
+            answerBox.text?.removeAtIndex((answerBox.text?.startIndex)!)
+        }
+        
+        if(checkCorrectAnswer()){
+            checkButtonOutlet.setImage(UIImage(named: "numButtonCheckGreenGradient.png"), forState: .Normal)
+            generateQuestion()
+        } else {
+            checkButtonOutlet.setImage(UIImage(named: "numButtonCheckRedGradient.png"), forState: .Normal)
+        }
     }
 }
-

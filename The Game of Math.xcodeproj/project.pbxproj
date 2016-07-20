@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		432F54751D30803500F57E0E /* HikarianLibrary (1).swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F54741D30803500F57E0E /* HikarianLibrary (1).swift */; };
 		437858B51D2D84350034D1D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437858B41D2D84350034D1D8 /* AppDelegate.swift */; };
 		437858B71D2D84350034D1D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437858B61D2D84350034D1D8 /* ViewController.swift */; };
 		437858BA1D2D84350034D1D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437858B81D2D84350034D1D8 /* Main.storyboard */; };
@@ -36,7 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		437858B11D2D84350034D1D8 /* MakeSchoolHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeSchoolHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		432F54741D30803500F57E0E /* HikarianLibrary (1).swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HikarianLibrary (1).swift"; path = "../../../Downloads/HikarianLibrary (1).swift"; sourceTree = "<group>"; };
+		437858B11D2D84350034D1D8 /* Game of Math.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game of Math.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		437858B41D2D84350034D1D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		437858B61D2D84350034D1D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		437858B91D2D84350034D1D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,10 +46,10 @@
 		437858BE1D2D84350034D1D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		437858C11D2D84350034D1D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		437858C31D2D84350034D1D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		437858C81D2D84350034D1D8 /* MakeSchoolHackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeSchoolHackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		437858C81D2D84350034D1D8 /* Math Geek.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Math Geek.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		437858CC1D2D84350034D1D8 /* MakeSchoolHackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSchoolHackTests.swift; sourceTree = "<group>"; };
 		437858CE1D2D84350034D1D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		437858D31D2D84350034D1D8 /* MakeSchoolHackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeSchoolHackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		437858D31D2D84350034D1D8 /* Math Geek.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Math Geek.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		437858D71D2D84350034D1D8 /* MakeSchoolHackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSchoolHackUITests.swift; sourceTree = "<group>"; };
 		437858D91D2D84350034D1D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43C1F24F1D2E9FA200FE8E05 /* ProblemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemType.swift; sourceTree = "<group>"; };
@@ -91,9 +93,9 @@
 		437858B21D2D84350034D1D8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				437858B11D2D84350034D1D8 /* MakeSchoolHack.app */,
-				437858C81D2D84350034D1D8 /* MakeSchoolHackTests.xctest */,
-				437858D31D2D84350034D1D8 /* MakeSchoolHackUITests.xctest */,
+				437858B11D2D84350034D1D8 /* Game of Math.app */,
+				437858C81D2D84350034D1D8 /* Math Geek.xctest */,
+				437858D31D2D84350034D1D8 /* Math Geek.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +111,7 @@
 				437858C31D2D84350034D1D8 /* Info.plist */,
 				437858BB1D2D84350034D1D8 /* MakeSchoolHack.xcdatamodeld */,
 				43C1F24F1D2E9FA200FE8E05 /* ProblemType.swift */,
+				432F54741D30803500F57E0E /* HikarianLibrary (1).swift */,
 			);
 			path = MakeSchoolHack;
 			sourceTree = "<group>";
@@ -134,9 +137,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		437858B01D2D84350034D1D8 /* MakeSchoolHack */ = {
+		437858B01D2D84350034D1D8 /* Math Geek */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 437858DC1D2D84350034D1D8 /* Build configuration list for PBXNativeTarget "MakeSchoolHack" */;
+			buildConfigurationList = 437858DC1D2D84350034D1D8 /* Build configuration list for PBXNativeTarget "Math Geek" */;
 			buildPhases = (
 				437858AD1D2D84350034D1D8 /* Sources */,
 				437858AE1D2D84350034D1D8 /* Frameworks */,
@@ -146,14 +149,14 @@
 			);
 			dependencies = (
 			);
-			name = MakeSchoolHack;
+			name = "Math Geek";
 			productName = MakeSchoolHack;
-			productReference = 437858B11D2D84350034D1D8 /* MakeSchoolHack.app */;
+			productReference = 437858B11D2D84350034D1D8 /* Game of Math.app */;
 			productType = "com.apple.product-type.application";
 		};
-		437858C71D2D84350034D1D8 /* MakeSchoolHackTests */ = {
+		437858C71D2D84350034D1D8 /* Math GeekTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 437858DF1D2D84350034D1D8 /* Build configuration list for PBXNativeTarget "MakeSchoolHackTests" */;
+			buildConfigurationList = 437858DF1D2D84350034D1D8 /* Build configuration list for PBXNativeTarget "Math GeekTests" */;
 			buildPhases = (
 				437858C41D2D84350034D1D8 /* Sources */,
 				437858C51D2D84350034D1D8 /* Frameworks */,
@@ -164,14 +167,14 @@
 			dependencies = (
 				437858CA1D2D84350034D1D8 /* PBXTargetDependency */,
 			);
-			name = MakeSchoolHackTests;
+			name = "Math GeekTests";
 			productName = MakeSchoolHackTests;
-			productReference = 437858C81D2D84350034D1D8 /* MakeSchoolHackTests.xctest */;
+			productReference = 437858C81D2D84350034D1D8 /* Math Geek.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		437858D21D2D84350034D1D8 /* MakeSchoolHackUITests */ = {
+		437858D21D2D84350034D1D8 /* Math GeekUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 437858E21D2D84350034D1D8 /* Build configuration list for PBXNativeTarget "MakeSchoolHackUITests" */;
+			buildConfigurationList = 437858E21D2D84350034D1D8 /* Build configuration list for PBXNativeTarget "Math GeekUITests" */;
 			buildPhases = (
 				437858CF1D2D84350034D1D8 /* Sources */,
 				437858D01D2D84350034D1D8 /* Frameworks */,
@@ -182,9 +185,9 @@
 			dependencies = (
 				437858D51D2D84350034D1D8 /* PBXTargetDependency */,
 			);
-			name = MakeSchoolHackUITests;
+			name = "Math GeekUITests";
 			productName = MakeSchoolHackUITests;
-			productReference = 437858D31D2D84350034D1D8 /* MakeSchoolHackUITests.xctest */;
+			productReference = 437858D31D2D84350034D1D8 /* Math Geek.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -211,7 +214,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 437858AC1D2D84350034D1D8 /* Build configuration list for PBXProject "MakeSchoolHack" */;
+			buildConfigurationList = 437858AC1D2D84350034D1D8 /* Build configuration list for PBXProject "The Game of Math" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -224,9 +227,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				437858B01D2D84350034D1D8 /* MakeSchoolHack */,
-				437858C71D2D84350034D1D8 /* MakeSchoolHackTests */,
-				437858D21D2D84350034D1D8 /* MakeSchoolHackUITests */,
+				437858B01D2D84350034D1D8 /* Math Geek */,
+				437858C71D2D84350034D1D8 /* Math GeekTests */,
+				437858D21D2D84350034D1D8 /* Math GeekUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				437858B71D2D84350034D1D8 /* ViewController.swift in Sources */,
+				432F54751D30803500F57E0E /* HikarianLibrary (1).swift in Sources */,
 				437858BD1D2D84350034D1D8 /* MakeSchoolHack.xcdatamodeld in Sources */,
 				437858B51D2D84350034D1D8 /* AppDelegate.swift in Sources */,
 				43C1F2501D2E9FA200FE8E05 /* ProblemType.swift in Sources */,
@@ -291,12 +295,12 @@
 /* Begin PBXTargetDependency section */
 		437858CA1D2D84350034D1D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 437858B01D2D84350034D1D8 /* MakeSchoolHack */;
+			target = 437858B01D2D84350034D1D8 /* Math Geek */;
 			targetProxy = 437858C91D2D84350034D1D8 /* PBXContainerItemProxy */;
 		};
 		437858D51D2D84350034D1D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 437858B01D2D84350034D1D8 /* MakeSchoolHack */;
+			target = 437858B01D2D84350034D1D8 /* Math Geek */;
 			targetProxy = 437858D41D2D84350034D1D8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -416,7 +420,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = makeschoolgame.math.com.makeschool.MakeSchoolHack;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Game of Math";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -431,7 +435,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = makeschoolgame.math.com.makeschool.MakeSchoolHack;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Game of Math";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -443,8 +447,8 @@
 				INFOPLIST_FILE = MakeSchoolHackTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = makeschoolgame.math.com.makeschool.MakeSchoolHackTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MakeSchoolHack.app/MakeSchoolHack";
+				PRODUCT_NAME = "Math Geek";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Math Geek.app/Math Geek";
 			};
 			name = Debug;
 		};
@@ -455,8 +459,8 @@
 				INFOPLIST_FILE = MakeSchoolHackTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = makeschoolgame.math.com.makeschool.MakeSchoolHackTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MakeSchoolHack.app/MakeSchoolHack";
+				PRODUCT_NAME = "Math Geek";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Math Geek.app/Math Geek";
 			};
 			name = Release;
 		};
@@ -466,7 +470,7 @@
 				INFOPLIST_FILE = MakeSchoolHackUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = makeschoolgame.math.com.makeschool.MakeSchoolHackUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Math Geek";
 				TEST_TARGET_NAME = MakeSchoolHack;
 			};
 			name = Debug;
@@ -477,7 +481,7 @@
 				INFOPLIST_FILE = MakeSchoolHackUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = makeschoolgame.math.com.makeschool.MakeSchoolHackUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Math Geek";
 				TEST_TARGET_NAME = MakeSchoolHack;
 			};
 			name = Release;
@@ -485,7 +489,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		437858AC1D2D84350034D1D8 /* Build configuration list for PBXProject "MakeSchoolHack" */ = {
+		437858AC1D2D84350034D1D8 /* Build configuration list for PBXProject "The Game of Math" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				437858DA1D2D84350034D1D8 /* Debug */,
@@ -494,7 +498,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		437858DC1D2D84350034D1D8 /* Build configuration list for PBXNativeTarget "MakeSchoolHack" */ = {
+		437858DC1D2D84350034D1D8 /* Build configuration list for PBXNativeTarget "Math Geek" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				437858DD1D2D84350034D1D8 /* Debug */,
@@ -503,7 +507,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		437858DF1D2D84350034D1D8 /* Build configuration list for PBXNativeTarget "MakeSchoolHackTests" */ = {
+		437858DF1D2D84350034D1D8 /* Build configuration list for PBXNativeTarget "Math GeekTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				437858E01D2D84350034D1D8 /* Debug */,
@@ -512,7 +516,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		437858E21D2D84350034D1D8 /* Build configuration list for PBXNativeTarget "MakeSchoolHackUITests" */ = {
+		437858E21D2D84350034D1D8 /* Build configuration list for PBXNativeTarget "Math GeekUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				437858E31D2D84350034D1D8 /* Debug */,

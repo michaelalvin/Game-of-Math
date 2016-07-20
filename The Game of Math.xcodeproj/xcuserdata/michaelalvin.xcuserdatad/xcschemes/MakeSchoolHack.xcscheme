@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "437858B01D2D84350034D1D8"
-               BuildableName = "MakeSchoolHack.app"
-               BlueprintName = "MakeSchoolHack"
-               ReferencedContainer = "container:MakeSchoolHack.xcodeproj">
+               BuildableName = "Game of Math.app"
+               BlueprintName = "Math Geek"
+               ReferencedContainer = "container:The Game of Math.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "437858C71D2D84350034D1D8"
-               BuildableName = "MakeSchoolHackTests.xctest"
-               BlueprintName = "MakeSchoolHackTests"
-               ReferencedContainer = "container:MakeSchoolHack.xcodeproj">
+               BuildableName = "Math Geek.xctest"
+               BlueprintName = "Math GeekTests"
+               ReferencedContainer = "container:The Game of Math.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "437858D21D2D84350034D1D8"
-               BuildableName = "MakeSchoolHackUITests.xctest"
-               BlueprintName = "MakeSchoolHackUITests"
-               ReferencedContainer = "container:MakeSchoolHack.xcodeproj">
+               BuildableName = "Math Geek.xctest"
+               BlueprintName = "Math GeekUITests"
+               ReferencedContainer = "container:The Game of Math.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "437858B01D2D84350034D1D8"
-            BuildableName = "MakeSchoolHack.app"
-            BlueprintName = "MakeSchoolHack"
-            ReferencedContainer = "container:MakeSchoolHack.xcodeproj">
+            BuildableName = "Game of Math.app"
+            BlueprintName = "Math Geek"
+            ReferencedContainer = "container:The Game of Math.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "437858B01D2D84350034D1D8"
-            BuildableName = "MakeSchoolHack.app"
-            BlueprintName = "MakeSchoolHack"
-            ReferencedContainer = "container:MakeSchoolHack.xcodeproj">
+            BuildableName = "Game of Math.app"
+            BlueprintName = "Math Geek"
+            ReferencedContainer = "container:The Game of Math.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "437858B01D2D84350034D1D8"
-            BuildableName = "MakeSchoolHack.app"
-            BlueprintName = "MakeSchoolHack"
-            ReferencedContainer = "container:MakeSchoolHack.xcodeproj">
+            BuildableName = "Game of Math.app"
+            BlueprintName = "Math Geek"
+            ReferencedContainer = "container:The Game of Math.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
